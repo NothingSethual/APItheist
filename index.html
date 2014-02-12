@@ -1,0 +1,34 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 <!doctype html>\
+<!-- timestamp: 2013-11-01 10:29 -->\
+<html>\
+    <head>\
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>\
+        <script type="text/javascript">\
+        function showResponse (response) \{\
+            RESPONSE = response;\
+            if (this && this.url && (typeof(this.url) == "string")) \{\
+                var anchor = jQuery("#url");\
+                anchor.text(this.url.toString());\
+                anchor.attr('href', this.url.toString());\
+            \}\
+            jQuery("#output").text(JSON.stringify(response, null, '  '));\
+        \}\
+        </script>\
+        <script src="script.js" type="text/javascript"></script>\
+    </head>\
+    <body>\
+        <div>URL:<a id="url"></a></div>\
+        <hr>\
+        <div>\
+            <pre id="output">\
+                <!-- content will appear here -->\
+            </pre>\
+        </div>\
+    </body>\
+</html>}
